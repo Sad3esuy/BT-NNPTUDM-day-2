@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="main.js"></script>
+    <script defer src="main.js">
+    </script>
 </head>
 <body>
-    
+    <div>
+        <table id="post-table">
+            <thead>
+                <th>
+                    <td>
+                        ID
+                    </td>
+                    <td>
+                        title
+                    </td>
+                    <td>
+                        views
+                    </td>
+                </th>
+            </thead>
+            <tbody id="post-body">
+                
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <div>
+            <input type="text" id="id_txt">
+            <input type="text" id="title_txt">
+            <input type="text" id="views_txt">
+            <input type="submit" value="Save" onclick="saveData()">
+        </div>
+    </div>
 </body>
 </html>
