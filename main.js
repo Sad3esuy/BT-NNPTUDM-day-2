@@ -18,18 +18,19 @@ async function LoadData() {
 function convertDataToHTML(post) {
     // Kiểm tra nếu bài viết đã xóa 
     const isDisabled = post.isDeleted ? "disabled" : "";
-    const styleBlur = post.isDeleted ? "style='opacity: 0.5; background-color: #f2f2f2; font-style: italic; font-weight: bold; text-decoration: line-through;'" : "";
+    const styleBlur = post.isDeleted ? "style='opacity: 0.5; background-color: #f8fafc; font-style: italic;'" : "";
 
     return `
     <tr ${styleBlur}>
         <td>${post.id}</td>
-        <td>${post.title}</td>
-        <td>${post.views}</td>
+        <td style="font-weight: 500;">${post.title}</td>
+        <td><span style="background: #e0f2fe; color: #0369a1; padding: 2px 8px; border-radius: 12px; font-size: 0.85rem;">${post.views}</span></td>
         <td>
-            <input type='button' 
-                   value='${post.isDeleted ? "Deleted" : "Delete"}' 
+            <button class='btn-delete' 
                    onclick='Delete("${post.id}")' 
-                   ${isDisabled} />
+                   ${isDisabled}>
+                   ${post.isDeleted ? "Deleted" : "Delete"}
+            </button>
         </td>
     </tr>`;
 }

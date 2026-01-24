@@ -39,21 +39,9 @@
     },
     {
       "id": "7",
-      "title": "test xoá",
-      "views": "234324",
-      "isDeleted": true
-    },
-    {
-      "id": "8",
-      "title": "dá",
-      "views": "áda",
-      "isDeleted": true
-    },
-    {
-      "id": "9",
-      "title": "sdfs",
-      "views": "fsd",
-      "isDeleted": true
+      "title": "heheheh",
+      "views": "100000",
+      "isDeleted": false
     }
   ],
   "comments": [

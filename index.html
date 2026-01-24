@@ -3,37 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script defer src="main.js">
-    </script>
+    <title>Post Management Dashboard</title>
+    <script defer src="main.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div>
-        <table id="post-table">
-            <thead>
-                <th>
-                    <td>
-                        ID
-                    </td>
-                    <td>
-                        title
-                    </td>
-                    <td>
-                        views
-                    </td>
-                </th>
-            </thead>
-            <tbody id="post-body">
-                
-            </tbody>
-        </table>
-    </div>
-    <div>
-        <div>
-            <input type="text" id="id_txt">
-            <input type="text" id="title_txt">
-            <input type="text" id="views_txt">
-            <input type="submit" value="Save" onclick="saveData()">
+    <div class="container">
+        <h2>Post Management</h2>
+        
+        <div class="layout">
+            <!-- Table Section -->
+            <div class="table-section">
+                <table id="post-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Title</th>
+                            <th>Views</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="post-body">
+                        <!-- Data injected by main.js -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Form Section -->
+            <div class="form-section">
+                <div class="form-card">
+                    <div class="form-group">
+                        <label for="id_txt">ID (Leave empty for new)</label>
+                        <input type="text" id="id_txt" placeholder="e.g. 1">
+                    </div>
+                    <div class="form-group">
+                        <label for="title_txt">Post Title</label>
+                        <input type="text" id="title_txt" placeholder="Enter title...">
+                    </div>
+                    <div class="form-group">
+                        <label for="views_txt">Views Count</label>
+                        <input type="text" id="views_txt" placeholder="0">
+                    </div>
+                    <input type="submit" value="Save Post" onclick="saveData()">
+                </div>
+            </div>
         </div>
     </div>
 </body>
