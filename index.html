@@ -27,11 +27,27 @@
                         <!-- Data injected by main.js -->
                     </tbody>
                 </table>
+
+                <h2 style="margin-top: 3rem;">Comment Management</h2>
+                <table id="comment-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Text</th>
+                            <th>Post ID</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="comment-body">
+                        <!-- Data injected by main.js -->
+                    </tbody>
+                </table>
             </div>
 
             <!-- Form Section -->
             <div class="form-section">
                 <div class="form-card">
+                    <h3>Manage Post</h3>
                     <div class="form-group">
                         <label for="id_txt">ID (Leave empty for new)</label>
                         <input type="text" id="id_txt" placeholder="e.g. 1">
@@ -45,6 +61,25 @@
                         <input type="text" id="views_txt" placeholder="0">
                     </div>
                     <input type="submit" value="Save Post" onclick="saveData()">
+                </div>
+
+                <div class="form-card" style="margin-top: 2rem;">
+                    <h3>Manage Comment</h3>
+                    <div class="form-group">
+                        <label for="comment_id_txt">Comment ID (Leave empty for new)</label>
+                        <input type="text" id="comment_id_txt" placeholder="e.g. 1">
+                    </div>
+                    <div class="form-group">
+                        <label for="comment_text_txt">Comment Text</label>
+                        <input type="text" id="comment_text_txt" placeholder="Enter comment...">
+                    </div>
+                    <div class="form-group">
+                        <label for="comment_post_id_select">Link to Post</label>
+                        <select id="comment_post_id_select" style="width: 100%; padding: 0.625rem; border: 1px solid var(--border-color); border-radius: 6px;">
+                            <option value="">Select a Post</option>
+                        </select>
+                    </div>
+                    <input type="submit" value="Save Comment" onclick="saveComment()" style="background-color: #10b981;">
                 </div>
             </div>
         </div>
